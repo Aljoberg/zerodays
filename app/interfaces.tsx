@@ -7,6 +7,8 @@ interface ImageObject {
 }
 interface ImageObjectProps {
     image: ImageObject;
+    onVote: Function;
+    id: number;
 }
 interface ImagesPageProps {
     initialImages: ImageObject[];
