@@ -10,10 +10,7 @@ export default function ImagesPage({initialImages}: ImagesPageProps) {
   let [images, setImages] = useState(initialImages);
 
   let updateImages = (updatedImage: ImageObject) => {
-    let updatedImages = images.map((image: ImageObject) => {
-        if(image.id == updatedImage.id) return updatedImage;
-        return image;
-    });
+    let updatedImages = images.map((image: ImageObject) => image.id == updatedImage.id ? updatedImage : image);
     setImages(updatedImages);
   }
 
@@ -28,7 +25,7 @@ export default function ImagesPage({initialImages}: ImagesPageProps) {
             <div className="inset-0 overflow-hidden rounded-lg shadow-lg">
               <Image src={image.url} height={300} width={500} alt="Image" />
             </div>
-            <div className="mt-4 flex items-center justify-between">
+            <div className="mt-2 flex items-center justify-between">
               <LikeDislike image={image} onVote={updateImages} id={image.id}/>
             </div>
             <div className="flex mt-2 h-2 rounded-full bg-gray-300">
