@@ -1,14 +1,16 @@
+const { hostname } = require('os')
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     images: {
         remotePatterns: [
             {
                 protocol: "https",
-                hostname: "amogus.org"
+                hostname: "images.unsplash.com"
             },
             {
                 protocol: "https",
-                hostname: "images.unsplash.com"
+                hostname: "img.jagranjosh.com"
             }
         ]
     }

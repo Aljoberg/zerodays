@@ -1,3 +1,4 @@
+import Error from "./Error";
 import ImagesPage from "./ImagesPage";
 
 export default async function FetchInitial() {
@@ -5,8 +6,10 @@ export default async function FetchInitial() {
     "https://challenge.zerodays.dev/api/v1/photos",
     {cache: "no-store"}
   );
+  if(!imageRequest.ok) return (
+    <Error/>
+  )
   let initialImages = await imageRequest.json();
-  // await (new Promise<void>(res => setTimeout(() => res(), 30000)))
   return (
     <ImagesPage initialImages={initialImages}/>
   );
