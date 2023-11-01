@@ -8,8 +8,8 @@ export default function NotFound() {
             <div className="shadow-lg p-5 bg-white rounded-lg">
                 <Image
                     src="https://img.jagranjosh.com/images/2022/November/2112022/wonderopolisCANVA_11zon.jpg"
-                    width={1000}
-                    height={600}
+                    width={700}
+                    height={400}
                     alt="ostrich"
                     className="rounded-lg"
                 />
