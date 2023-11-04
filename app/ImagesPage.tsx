@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import { useState } from "react";
 import { ImageObject, ImagesPageProps } from "./interfaces";
 import Image from "next/image";
 import LikeDislike from "./LikeDislike";
@@ -31,11 +31,11 @@ export default function ImagesPage({initialImages}: ImagesPageProps) {
             <div className="flex mt-2 h-2 rounded-full bg-gray-300">
               <div
                 style={{ width: `${likePercentage}%` }}
-                className="h-full rounded-full bg-green-500"
+                className="h-full rounded-tl-full rounded-bl-full bg-green-500"
               ></div>
               <div
                 style={{ width: `${100 - likePercentage}%` }}
-                className="h-full rounded-full bg-red-500"
+                className="h-full rounded-br-full rounded-tr-full bg-red-500"
               ></div>
             </div>
           </div>

@@ -7,7 +7,9 @@ export default async function Home() {
   return (
     <Suspense fallback={(
       <div role="status" className="flex justify-center items-center h-screen">
-        <Loading/>
+        <div className="w-9 h-9">
+          <Loading/>
+	</div>
       </div>
     )}>
       <FetchInitial/>
